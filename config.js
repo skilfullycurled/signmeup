@@ -2,7 +2,7 @@ var config = {}
 
 //MONGODB CONFIG
 config.mongodb = {};
-config.mongodb.host = 'YOUR LOCAL HOST'
+config.mongodb.host = 'YOUR MONGODB LOCAL HOST'
 
 //TWILIO CONFIG
 config.twilio = {};

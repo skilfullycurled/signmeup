@@ -1,3 +1,4 @@
+config.js
 controllers/sms-exp.js
 controllers/users.js
 controllers/.signmeup-bk.js

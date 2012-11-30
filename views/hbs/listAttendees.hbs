@@ -1,0 +1,16 @@
+{{#extend "body"}}
+
+<h1>{{title}}</h1>
+
+<div id="attendees">
+    
+    {{#each event.attendees}}
+    
+        <p>{{.}}</p>
+    
+    {{/each}}
+    
+    
+</div>
+
+{{/extend}}

@@ -1,0 +1,37 @@
+extends layout
+
+block body
+  h1= title
+  p Welcome to #{title}
+  #event-reg-form
+    form(action='/civical/create', method='POST')
+      #title
+        label(for='title') Event Title:
+        input(type='text', name='title', placeholder='Event Title') 
+      #venue
+        label(for='venue_name') Venue Name
+        input(type='text', name='venue_name', placeholder='Venue Name')
+        label(for='venue_location') Location
+        input(type='text', name='venue_location', placeholder='Venue Location')
+      #time
+        label(for='begins') Begins:
+        input(type='text', name='begins', placeholder='Begins')
+        label(for='ends') Ends:
+        input(type='text', name='ends', placeholder='Ends')
+      #desc
+        label(for='desc') Description:
+        input(type='text', name='desc', placeholder='Breif Description')
+      #ward
+        label(for='ward') Ward:
+        input(type='text', name='ward', placeholder='Ward')
+      #neighborhood
+        label(for='hood') Neighborhood:
+        input(type='text', name='hood', placeholder='Neighborhood')
+      #issues
+        label(for='issues') Issues:
+        input(type='text', name='issues', placeholder='Issues')
+      #signup-code
+        label(for='signup_code') Sign Up Code:
+        input(type='text', name='signup_code', placeholder='Sign Up Code')
+      #submit.button
+        input(type='submit') Register Event

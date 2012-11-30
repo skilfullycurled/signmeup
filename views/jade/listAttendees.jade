@@ -1,0 +1,7 @@
+extends layout
+
+block body
+  h1= title
+  #attendees
+    each attendee in event.attendees
+      p= attendee

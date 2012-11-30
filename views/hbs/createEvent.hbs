@@ -1,0 +1,63 @@
+{{#extend "body"}}
+
+<h1>{{title}}</h1>
+
+<div id="event-reg-form">
+
+<form method="POST" action="/civical/create">
+
+<div id="title">
+<label for="title">Event Title:</label>
+<input type="text" placeholder="Event Title" name="title">
+</div>
+
+<div id="venue">
+
+<label for="venue_name">Venue Name</label>
+<input type="text" placeholder="Venue Name" name="venue_name">
+
+<label for="venue_location">Location</label>
+<input type="text" placeholder="Venue Location" name="venue_location">
+</div>
+
+<div id="time">
+<label for="begins">Begins:</label>
+<input type="text" placeholder="Begins" name="begins">
+
+<label for="ends">Ends:</label>
+<input type="text" placeholder="Ends" name="ends">
+</div>
+
+<div id="desc">
+<label for="desc">Description:</label>
+<input type="text" placeholder="Breif Description" name="desc">
+</div>
+
+<div id="ward">
+<label for="ward">Ward:</label>
+<input type="text" placeholder="Ward" name="ward">
+</div>
+
+<div id="neighborhood">
+<label for="hood">Neighborhood:</label>
+<input type="text" placeholder="Neighborhood" name="hood">
+</div>
+
+<div id="issues">
+<label for="issues">Issues:</label>
+<input type="text" placeholder="Issues" name="issues">
+</div>
+
+<div id="signup-code">
+<label for="signup_code">Sign Up Code:</label>
+<input type="text" placeholder="Sign Up Code" name="signup_code">
+</div>
+
+<div class="button" id="submit">
+<input type="submit">
+</div>
+
+</form>
+</div>
+
+{{/extend}}

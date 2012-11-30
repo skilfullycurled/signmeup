@@ -181,7 +181,7 @@ exports.router = function(req, res){
 					
 					} else if(user) {
 						
-						console.log("user is already registered, with " + user.email + " signing them up now...");
+						console.log("user is already registered, with " + user.email + " signing them up for " + event.title + " now...");
 	
 						var email = user.email;
 						

@@ -14,7 +14,7 @@ exports.router = function(req, res){
   	//console.log(req.route);
   	//console.log(req.body);
   	  
-  	var msg = req.body.Body.toLowerCase();
+  	var msg = req.body.Body.toLowerCase().trim();
 	var phone = req.body.From;
   	var route = req.cookies.route;
 
@@ -26,6 +26,13 @@ exports.router = function(req, res){
   		res.clearCookie('event');
   		res.clearCookie('signup_code');
   		res.send('<Response></Response>');
+  		
+  		Twilio.SMS.create({
+			to: req.body.From, 
+			from: smu_number, 
+			body: "Cookies cleared"
+			}, function(err,res) {
+		});
   
  	 } else if(msg === 'save'){
  	 	
@@ -139,7 +146,8 @@ exports.router = function(req, res){
 							Twilio.SMS.create({
 								to: req.body.From, 
 								from: smu_number, 
-								body: "Thank you for attending " + event.title + " What email would you like to sign up with?"
+								body: "Thank you for attending " + event.title + ". " +
+									  "What email would you like to sign up with?"
 								}, function(err,res){
 							});
 							
@@ -171,8 +179,8 @@ exports.router = function(req, res){
 									Twilio.SMS.create({
 										to: req.body.From, 
 										from: smu_number, 
-										body: "Signup successful.  Thank you for attending " + event.title +
-											  " Text 'save' to skip the step of sending your email next time"
+										body: "Signup successful for " + event.title + " with the email " + email + ". " +  
+											  "Text 'save' to skip the step of sending your email next time."
 										}, function(err,res) {
 									});	
 								}
@@ -190,7 +198,8 @@ exports.router = function(req, res){
 							Twilio.SMS.create({
 								to: req.body.From, 
 								from: smu_number, 
-								body: "Signup successful.  Thank you for attending " + event.title
+								body: "Signup successful with email " + user.email + ". " + 
+									  "Thank you for attending " + event.title + "."
 								}, function(err,res) {
 							});	
 						});

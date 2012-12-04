@@ -71,34 +71,44 @@ exports.router = function(req, res){
  	 	
  	 	User.findOne({ phone: phone }, function (err, user){
  	 		
- 	 		user.remove(function (err){
+ 	 		if(err){
+ 	 			return console.log(err);
+ 	 			
+ 	 		} else if(!user){
+ 	 			
+ 	 			console.log("no user exists with phone number " + phone);
+					
+				Twilio.SMS.create({
+					to: req.body.From, 
+					from: smu_number, 
+					body: "There is no user with the phone number " + phone + "."
+					}, function(err,res) {
+				});	
 
-				if(!err) {
-					
-					console.log("user removed");
-					
-					res.clearCookie('user');
- 	 				res.send('<Response></Response>');
-					
-					Twilio.SMS.create({
-						to: req.body.From, 
-						from: smu_number, 
-						body: "The information for the phone number " + phone + " is no longer saved."
-						}, function(err,res) {
-					});	
+ 	 		} else if(user){
+ 	 			
+ 	 			user.remove(function (err){
+
+					if(!err) {
+						
+						console.log("user removed");
+						
+						res.clearCookie('user');
+	 	 				res.send('<Response></Response>');
+						
+						Twilio.SMS.create({
+							to: req.body.From, 
+							from: smu_number, 
+							body: "The information for the phone number " + phone + " is no longer saved."
+							}, function(err,res) {
+						});	
 			
-				} else {
-					
-					console.log("no user exists with phone number " + phone);
-					
-					Twilio.SMS.create({
-						to: req.body.From, 
-						from: smu_number, 
-						body: "There is no user with the phone number " + phone + "."
-						}, function(err,res) {
-					});	
-				}
-			});
+					} else {
+						
+						return console.log(err);
+					}	
+				});
+ 	 		} 
 		});
 	 
  	 } else {

@@ -12,13 +12,6 @@ This application is a proof of concept. Here's how it works:
 3. At the event, users text the event code
 4. If they 
 
-
-
-
-
-
-
-
 ###To-do's:
 
 - **Security** - This app has no security measures whatsoever, and in today's surveilance climate, the app is completely useless unless this can be addressed.  The very nature of the application requires users to be sending phone numbers and emails.  Securing this information presents two significant challenges.  First, the general security of the database.  Second, defense against any eavesdropping while the messages are in transit.
@@ -35,11 +28,9 @@ This application is a proof of concept. Here's how it works:
 
 - **Event data** - More information coleection about the event beyond the title, date, time, description, perhaps.
 
--**List download** - The ability for the organization to download the list after the event.
+- **List download** - The ability for the organization to download the list after the event.
 
 - **Tests** - this code does not have any unit tests nor has it been tested in the field in groups over 10 people.
-
-
 
 ###Future directions
 

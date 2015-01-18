@@ -1,4 +1,4 @@
-!(./public/signmeup-iphone.png)
+![alt tag](./public/signmeup-iphone.png)
 
 # Signmeup
 ### Paperless event signup built with Express, Mongoose, Handlbars and Twilio.

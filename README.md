@@ -1,4 +1,4 @@
-![iphone](http://skilfullycurled.github.com/repository/signmeup/public/signmeup-iphone.png)
+![iphone](./signmeup/public/signmeup-iphone.png)
 
 # Signmeup
 ### Paperless event signup built with Express, Mongoose, Handlbars and Twilio.

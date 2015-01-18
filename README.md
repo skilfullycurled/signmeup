@@ -1,4 +1,4 @@
-!(./public/signmeup-iphone.png)
+!(skilfullycurled/signmeup/blob/master/public/signmeup-iphone.png)
 
 # Signmeup
 ### Paperless event signup built with Express, Mongoose, Handlbars and Twilio.

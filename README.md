@@ -18,6 +18,12 @@ This application is a proof of concept. Here's an over view of how it currently 
 7. If yes, a second message will be sent letting the user know that they can remove their info from the database any time by texting "forget".
 8. If they do, a message is sent saying that they have been removed.
 
+###Setup
+
+Sign up for Twillio, then fill in the config.js accordingly.
+
+<p>(Surely, this should be elaborated upon such that cloning and installing dependancies is a part of it, including signing up for Twillio.)</p>
+
 ###To-do's:
 
 - **Security** - This app has no security measures whatsoever, and in today's surveilance climate, the app is completely useless unless this can be addressed.  The very nature of the application requires users to be sending phone numbers and emails.  Securing this information presents two significant challenges.  First, the general security of the database.  Second, defense against any eavesdropping while the messages are in transit.

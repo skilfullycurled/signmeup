@@ -22,7 +22,7 @@ This application is a proof of concept. Here's an over view of how it currently 
 
 Sign up for Twillio, then fill in the config.js accordingly.
 
-<p>(Surely, this should be elaborated upon such that cloning and installing dependancies is a part of it, including signing up for Twillio.)</p>
+<p style="font-size:10pt;">(Surely, this should be elaborated upon such that cloning and installing dependancies is a part of it, including signing up for Twillio.)</p>
 
 ###To-do's:
 
